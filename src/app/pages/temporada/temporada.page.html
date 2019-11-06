@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+          <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Temporadas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item *ngFor="let i of temporadas | keyvalue" routerLink="/episodios/{{i.value.id}}">
+      <ion-avatar>
+        <img src="{{i.value.image.medium}}" *ngIf="i.value.image != null"/>
+      </ion-avatar>
+      <ion-label>&nbsp;&nbsp;Temporada {{i.key}} <br> &nbsp;&nbsp;{{i.value.premiereDate}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

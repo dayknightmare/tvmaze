@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>episodio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="{{data.image.original}}" *ngIf="data.image">
+  <!-- {{}} -->
+  <p>
+    <ion-label [innerHTML]="data.summary"></ion-label>
+  </p>
+</ion-content>
