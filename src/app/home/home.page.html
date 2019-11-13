@@ -6,9 +6,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-searchbar placeholder="Pesqusiar" (ionChange)="filtrar()" [(ngModel)]="busca"></ion-searchbar>
 
 <ion-content>
+    <ion-searchbar color="dark" placeholder="Pesqusiar" (ionChange)="filtrar()" [(ngModel)]="busca"></ion-searchbar>
   <ion-list>
     <ion-item routerLink="/detalhes/{{i.id}}" *ngFor="let i of listaShow">
       <ion-avatar *ngIf="i.image != null">

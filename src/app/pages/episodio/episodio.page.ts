@@ -22,7 +22,7 @@ export class EpisodioPage implements OnInit {
 
     this.tv.getEpisode(this.id)
       .subscribe((res) => {
-        this.data = res;
+        this.data = res;    
       });
   }
 
